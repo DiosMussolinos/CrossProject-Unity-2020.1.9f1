@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/InGameMenu/Reception.unity
+- path: Assets/Scenes/MenuScenes/Credits.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
