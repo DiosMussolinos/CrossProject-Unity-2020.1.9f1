@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b9cd7e2b3f72842b4fa5594c098056, type: 3}
+  m_Name: BlueCandy
+  m_EditorClassIdentifier: 
+  ID: 3
+  itemName: BlueCandy
+  consumable: 1
+  prefab: {fileID: 7413077590473578848, guid: 30109f71b0b59f84d9fccc322112713e, type: 3}
+  item: {fileID: -9114703323446395147, guid: 11b8f57522e758f4e8a722dfea8a8ba2, type: 3}
+  lessHeartBeat: 50
