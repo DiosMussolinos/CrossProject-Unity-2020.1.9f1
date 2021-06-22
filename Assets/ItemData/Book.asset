@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 1
   itemName: Book
-  itemType: LoreRelated
-  prefab: {fileID: 7826253413139963783, guid: 7e9977e0be9d5564282b0e8575c825be, type: 3}
-  item: {fileID: -6336791472069621807, guid: ca8337e71a9dcb64a9b31974bab34f0e, type: 3}
+  consumable: 0
+  prefab: {fileID: 7358873742136672230, guid: 7e9977e0be9d5564282b0e8575c825be, type: 3}
+  item: {fileID: -6336791472069621807, guid: 07e1cdd335a0fc0459816bafe7a08c71, type: 3}
   lessHeartBeat: 0

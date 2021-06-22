@@ -16,5 +16,5 @@ MonoBehaviour:
   itemName: Red Pill
   consumable: 1
   prefab: {fileID: 3174328152005533288, guid: 8d0508f156ed3ff4c9c5adcec6d1fd9f, type: 3}
-  item: {fileID: 2534964839176971238, guid: 1c38e319bf3d9c84d8b3fc5550d3068e, type: 3}
+  item: {fileID: 2534964839176971238, guid: 97fb99a701efb7f46b8c3689945aa77a, type: 3}
   lessHeartBeat: 20

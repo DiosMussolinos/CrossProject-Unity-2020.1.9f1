@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/MenuScenes/Credits.unity
-    guid: cee8215182f957c45a38238b9a0e5b1b
+    path: Assets/Scenes/MenuScenes/Menus.unity
+    guid: b79e0b9584c17294d9b90f309a331065
   - enabled: 1
-    path: Assets/Scenes/InGameMenu/Inside.unity
+    path: Assets/Scenes/InGameMenu/Rocca Inside.unity
+    guid: 4371b2ea68a0acd4089582108dc3dc7a
+  - enabled: 1
+    path: Assets/Scenes/InGameMenu/Prototype.unity
     guid: 03083b1a0eced3047ba440871ebfcf49
-  - enabled: 1
-    path: Assets/Scenes/MenuScenes/MainMenu.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/MenuScenes/OptionMenu.unity
-    guid: be884202d216fa142aeecbbee4fa1caf
   m_configObjects: {}

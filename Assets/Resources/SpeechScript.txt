@@ -1,0 +1,381 @@
+{
+    "narrations": [
+        {
+            "name": "Janitor",
+            "speechNr": 0,
+            "sentences": [
+                {
+                    "start":0,
+                    "end":5,
+                    "text": "Janitor: If it wasn't a Child!"
+                },
+                {
+                    "start":5,
+                    "end":7,
+                    "text": "Janitor: Gotten your mom some flowers already?"
+                }
+            ]
+        },
+        {
+            "name": "Janitor",
+            "speechNr": 1,
+            "sentences": [
+                {
+                    "start":0,
+                    "end":2,
+                    "text": "Janitor: Hello, Child"
+                },
+                {
+                    "start":2, 
+                    "end":5,
+                    "text": "Janitor: Are you lost?"
+                },
+                {
+                    "start":5, 
+                    "end":9,
+                    "text": "Janitor: Hey, I'm talking to you!"
+                }
+            ]
+        },
+        {
+            "name": "Janitor",
+            "speechNr": 2,
+            "sentences": [
+                {
+                    "start":0, "end":2,
+                    "text": "Janitor: I like spiders"
+                },
+                {
+                    "start":2, "end":6,
+                    "text": "Janitor: They have 5 more eyes than me"
+                }
+            ]
+        },
+        {
+            "name": "Janitor",
+            "speechNr": 3,
+            "sentences": [
+                {
+                    "start":0, "end":2,
+                    "text": "Janitor: Maybe I should quit this job"
+                },
+                {
+                    "start":2, "end":5,
+                    "text": "Janitor: What do you think?"
+                }
+            ]
+        },
+        {
+            "name": "Janitor",
+            "speechNr": 4,
+            "sentences": [
+                {
+                    "start":0, "end":2,
+                    "text": "Janitor: (whistles)"
+                },
+                {
+                    "start":2, "end":5,
+                    "text": "Janitor: (sings)"
+                }
+            ]
+        },
+        {
+            "name": "Nurse",
+            "speechNr": 1,
+            "sentences": [
+                {
+                    "start":0, "end":5,
+                    "text": "Nurse: These little rats with masks..!"
+                },
+                {
+                    "start":5, "end":7,
+                    "text": "Nurse: How they annoy me."
+                }
+            ]
+        },
+        {
+            "name": "Nurse",
+            "speechNr": 2,
+            "sentences": [
+                {
+                    "start":0, "end":4,
+                    "text": "Nurse: You aren't going to meet your mom empty-handed, are you?"
+                },
+                {
+                    "start":4, "end":7,
+                    "text": "Nurse: Pathetic child"
+                },
+                {
+                    "start":7, "end":12,
+                    "text": "Nurse: Go fetch some more flowers for her, would you?"
+                }
+            ]
+        },
+        {
+            "name": "Nurse",
+            "speechNr": 3,
+            "sentences": [
+                {
+                    "start":0, "end":5,
+                    "text": "Nurse: How rude of you not to even bother to collect at least 3 flowers for your mom"
+                },
+                {
+                    "start":5, "end":7,
+                    "text": "Nurse: I'd have gotten rid of such child!"
+                }
+            ]
+        },
+        {
+            "name": "Nurse",
+            "speechNr": 4,
+            "sentences": [
+                {
+                    "start":0, "end":2,
+                    "text": "Nurse: Hmph."
+                },
+                {
+                    "start":2, "end":5,
+                    "text": "Nurse: You absolutely cannot just go to your mom without flowers."
+                }
+            ]
+        },
+        {
+            "name": "Nurse",
+            "speechNr": 5,
+            "sentences": [
+                {
+                    "start":0, "end":2,
+                    "text": "Nurse: That's better"
+                },
+                {
+                    "start":2, "end":6,
+                    "text": "Nurse: You may go in"
+                }
+            ]
+        },
+        {
+            "name": "Receptionist",
+            "speechNr": 0,
+            "sentences": [
+                {
+                    "start":0, "end":4,
+                    "text": "Receptionist: Hello, Child! Welcome to this magic castle."
+                },
+                {
+                    "start":4, "end":8,
+                    "text": "Receptionist: I bet you came here for your mom.. she is a princess, you know!"
+                },
+                {
+                    "start":8, "end":12,
+                    "text": "Receptionist: First of all, you should avoid shadows and dark places in general.."
+                },
+                {
+                    "start":12, "end":16,
+                    "text": "Receptionist: And keep an eye on your heartbeat. It is even more dangerous when they can hear you."
+                },
+                {
+                    "start":16, "end":20,
+                    "text": "Receptionist: Besides, you might simply die from a heart attack."
+                },
+                {
+                    "start":20, "end":23,
+                    "text": "Receptionist: I left some candies for you here and there. They will help."
+                },
+                {
+                    "start":23, "end":27,
+                    "text": "Receptionist: There are also guys who might use your help."
+                },
+                {
+                    "start":27, "end":30,
+                    "text": "Receptionist: They will give you beautiful lillies for your help.."
+                },
+                {
+                    "start":30, "end":34,
+                    "text": "Receptionist: You know, why don't you gather those lillies and bring them to your mom? She will be so happy!"
+                }
+            ]
+        },
+        {
+            "name": "Father",
+            "speechNr": 1,
+            "sentences": [
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                },
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                }
+            ]
+        },
+        {
+            "name": "Father",
+            "speechNr": 2,
+            "sentences": [
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                },
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                }
+            ]
+        },
+        {
+            "name": "Father",
+            "speechNr": 3,
+            "sentences": [
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                },
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                }
+            ]
+        },
+        {
+            "name": "Cat",
+            "speechNr": 1,
+            "sentences": [
+                {
+                    "start":0, "end":5,
+                    "text": "Cat: Meow?"
+                },
+                {
+                    "start":5, "end":10,
+                    "text": "Cat: Does Child want to converse?"
+                }
+            ]
+        },
+        {
+            "name": "Panda",
+            "speechNr": 1,
+            "sentences": [
+                {
+                    "start":3, "end":5,
+                    "text": "Panda: Books"
+                },
+                {
+                    "start":5, "end":7,
+                    "text": "Panda: I adore books"
+                }
+            ]
+        },
+        {
+            "name": "FIF",
+            "speechNr": 3,
+            "sentences": [
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                },
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                }
+            ]
+        },
+        {
+            "name": "FIF",
+            "speechNr": 4,
+            "sentences": [
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                },
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                }
+            ]
+        },
+        {
+            "name": "FIF",
+            "speechNr": 5,
+            "sentences": [
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                },
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                }
+            ]
+        },
+        {
+            "name": "HIF",
+            "speechNr": 1,
+            "sentences": [
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                },
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                }
+            ]
+        },
+        {
+            "name": "HIF",
+            "speechNr": 2,
+            "sentences": [
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                },
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                }
+            ]
+        },
+        {
+            "name": "HIF",
+            "speechNr": 3,
+            "sentences": [
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                },
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                }
+            ]
+        },
+        {
+            "name": "HIF",
+            "speechNr": 4,
+            "sentences": [
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                },
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                }
+            ]
+        },
+        {
+            "name": "HIF",
+            "speechNr": 5,
+            "sentences": [
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                },
+                {
+                    "start":0, "end":60,
+                    "text": "saysomething"
+                }
+            ]
+        }
+    ]
+}

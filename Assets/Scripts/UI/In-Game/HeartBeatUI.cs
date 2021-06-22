@@ -7,10 +7,12 @@ public class HeartBeatUI : MonoBehaviour
 {
     public Text heartBeat;
     public ControlAndMovement player;
+    private int heartBeatInt;
 
     // Update is called once per frame
     void Update()
     {
-        heartBeat.text = player.heartBeat.ToString();
+        heartBeatInt = (int)(player.heartBeat);
+        heartBeat.text = heartBeatInt.ToString();
     }
 }

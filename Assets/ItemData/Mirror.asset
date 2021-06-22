@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b9cd7e2b3f72842b4fa5594c098056, type: 3}
+  m_Name: Mirror
+  m_EditorClassIdentifier: 
+  ID: 6
+  itemName: Mirror
+  consumable: 0
+  prefab: {fileID: 4744734057278425549, guid: 198b22b6e5f8cd64db751929fc02ca7e, type: 3}
+  item: {fileID: -4950958400851267771, guid: 44ee0518778edf4459b0980449e39287, type: 3}
+  lessHeartBeat: 0

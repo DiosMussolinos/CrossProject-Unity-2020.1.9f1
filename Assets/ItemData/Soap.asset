@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b9cd7e2b3f72842b4fa5594c098056, type: 3}
+  m_Name: Soap
+  m_EditorClassIdentifier: 
+  ID: 5
+  itemName: Soap
+  consumable: 0
+  prefab: {fileID: 5589764590355585466, guid: 3b3ff19935aab7f4e8e45af3f3d305c8, type: 3}
+  item: {fileID: -5495902117074765545, guid: 7929c4ae5ebe52d40a03e77165e599bd, type: 3}
+  lessHeartBeat: 0

@@ -14,6 +14,4 @@ public class Item : ScriptableObject
     public Mesh item;
     //Values
     public int lessHeartBeat;
-
-
 }

@@ -1,0 +1,276 @@
+fileFormatVersion: 2
+guid: 34a93c9363071024f8c98c991cbefa2a
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Accents
+    second: {fileID: 2100000, guid: 2a18d890b04277448b7ad3317c06123e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 0
+    second: {fileID: 2100000, guid: 3f9ceb8041b55f5488baa32acea877c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 0.1
+    second: {fileID: 2100000, guid: 17d6cdc83cc851f499fd84d0875acd2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 1
+    second: {fileID: 2100000, guid: 36dfd4a71ae7e8746a1f10fd2d10b76d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 1.1
+    second: {fileID: 2100000, guid: 2a4bff234fca17949a0f42c384562de2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 2
+    second: {fileID: 2100000, guid: 14ee83026f7318949986a34f421f95fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 2.1
+    second: {fileID: 2100000, guid: b75d9b4f5b6d01a4f83dac5fbab084ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 3
+    second: {fileID: 2100000, guid: 52f0dda62eff92446bb1bb8616a5fecc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 3.1
+    second: {fileID: 2100000, guid: 53baad1cbebe6a6429a09e85d7a67c27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 4
+    second: {fileID: 2100000, guid: 316097c20adf7754e94ae83aaf78b390, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 4.1
+    second: {fileID: 2100000, guid: b37162dd8072ea645b21a4a7d077fb6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 5
+    second: {fileID: 2100000, guid: 03095b4fbdd11ea43ab280bed4d13621, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 5.1
+    second: {fileID: 2100000, guid: 8fc5f62a46480844788d034af1503b29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 6
+    second: {fileID: 2100000, guid: 4af67a52e44faa84ab4d34d99a5bc6f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 6.1
+    second: {fileID: 2100000, guid: a55b2c00452898f4c87bab8b5024d80c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 7
+    second: {fileID: 2100000, guid: 44354e10651cae74cad63269840972d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 8
+    second: {fileID: 2100000, guid: 087cadfc01424d943b5d3a7f0acb28cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: File 8.1
+    second: {fileID: 2100000, guid: ced73485628ebbe469ef03561b5c749e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lid_4
+    second: {fileID: 2100000, guid: c2462d66cb286204688bacc71d3d10f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main Sides
+    second: {fileID: 2100000, guid: 5b5a312466b790d46b2b071b5667c322, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medication Bottle
+    second: {fileID: 2100000, guid: 5b3a99a4b3f81b947a6753086a536444, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medication Bottle.1
+    second: {fileID: 2100000, guid: c2226a9c9e6b3734287b9e669c0f2155, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medication Bottle.10
+    second: {fileID: 2100000, guid: 45ce1607a9bbe99479e13b5424c1e25a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medication Bottle.11
+    second: {fileID: 2100000, guid: 195b61be71c758340b0b0a9dd236b179, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medication Bottle.2
+    second: {fileID: 2100000, guid: 98eea2ca98d58d3449e045f24e6c9fe4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medication Bottle.3
+    second: {fileID: 2100000, guid: 6c91f1d3519d0af47b1881af1eabad8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medication Bottle.4
+    second: {fileID: 2100000, guid: 4b0689e57391c1746af707580e6cba40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medication Bottle.5
+    second: {fileID: 2100000, guid: d931547c3c0695a419c5a1937810b40f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medication Bottle.6
+    second: {fileID: 2100000, guid: b8d08e6ebf4691a41b8d0f460a45234d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medication Bottle.7
+    second: {fileID: 2100000, guid: b87b68a5ff3b5b341aaea8194eca1a64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medication Bottle.8
+    second: {fileID: 2100000, guid: f184071e15eb5d248bcbc47865509731, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medication Bottle.9
+    second: {fileID: 2100000, guid: f27cff946b9146e4887f4bb4ceea1269, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: c25859f131af9f1429706c207858f8ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plane
+    second: {fileID: 2100000, guid: 15a6211b6c8bd3543aa6a772984cd644, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Studs
+    second: {fileID: 2100000, guid: 8b59c7b15a6ec5843b34edf17ccbbef7, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

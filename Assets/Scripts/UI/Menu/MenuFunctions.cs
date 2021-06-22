@@ -6,7 +6,7 @@ public class MenuFunctions : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Inside");
+        SceneManager.LoadScene("Rocca Inside");
     }
 
     public void ToCredits()
