@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56387b3c6d2f2f34fbf3ca842db132a9, type: 3}
   m_Name: FrameBeNotAfraid
   m_EditorClassIdentifier: 
-  ID: 3
+  ID: 2
   ObjectName: BeNotAfraid
   seen: 0
   heartBeatValue: 21

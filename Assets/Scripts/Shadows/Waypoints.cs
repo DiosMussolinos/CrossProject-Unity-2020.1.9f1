@@ -17,6 +17,6 @@ public class Waypoints : MonoBehaviour
             }
         }
     }
-
     */
+    
 }

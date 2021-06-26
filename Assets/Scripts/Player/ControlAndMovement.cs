@@ -12,7 +12,7 @@ public class ControlAndMovement : MonoBehaviour
     public Camera cam;
     //HeartBeats
     public float heartBeat = 120;
-    public int multiplicator = 2;
+    public float multiplicator = 2;
     //Shadows
     //public
     //Increase Walls
@@ -178,7 +178,6 @@ public class ControlAndMovement : MonoBehaviour
     public float IncreasingHeartBeatDistance()
     {
         heartBeatDis = heartBeat / 8;
-        //dist.transform.localScale = new Vector3(heartBeatDis, heartBeatDis, heartBeatDis);
         return heartBeatDis;
         
     }

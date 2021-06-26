@@ -98,7 +98,7 @@ Material:
     - _VertexMultiplayer: 10
     - _VerticeMultiplayer: 0.01
     - _ZWrite: 1
-    - strength: 2
+    - strength: 0.5
     - velocity: 100
     m_Colors:
     - _Color: {r: 1, g: 0.97662324, b: 0, a: 1}

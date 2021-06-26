@@ -63,7 +63,7 @@ public class FriendlyImaginaryFriends : MonoBehaviour
     void Update()
     {
         //Get boolean of interaction from Player to stop moving
-        if ((fsm.currentState == interactingState) && (Input.GetKeyDown("e")))
+        if ((fsm.currentState == interactingState) && (Input.GetKeyDown("e") && (control.interacting == false)))
         {
             control.interacting = true;
             thisInteraction = true;

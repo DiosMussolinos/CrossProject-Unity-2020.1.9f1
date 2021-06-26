@@ -65,7 +65,7 @@ public class AllMenus : MonoBehaviour
     private float timeToNext = 0.0434f;
     private float timeToNextInitial = 0.0434f;
 
-    private float readingTime = 2f;
+    private float readingTime = 3f;
     private float readingTimeInitial = 2f;
 
     private bool blinking = false;
@@ -290,7 +290,7 @@ public class AllMenus : MonoBehaviour
     {
         readingTime -= Time.deltaTime;
 
-        if (readingTime <= 0)
+        if ((readingTime <= 0) || (Input.GetMouseButtonDown(0)))
         {
             menuScreenIndex = 2;
             animationIndex = 0;
@@ -366,7 +366,7 @@ public class AllMenus : MonoBehaviour
     {
         readingTime -= Time.deltaTime;
 
-        if (readingTime <= 0)
+        if ((readingTime <= 0) || (Input.GetMouseButtonDown(0)))
         {
             menuScreenIndex = 5;
             readingTime = readingTimeInitial;
@@ -438,7 +438,7 @@ public class AllMenus : MonoBehaviour
     {
         readingTime -= Time.deltaTime;
 
-        if (readingTime <= 0)
+        if ((readingTime <= 0) || (Input.GetMouseButtonDown(0)))
         {
             menuScreenIndex = 8;
             readingTime = readingTimeInitial;
