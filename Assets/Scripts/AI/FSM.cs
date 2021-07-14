@@ -8,8 +8,6 @@ public class FSM : MonoBehaviour
     public State currentState;
     private NavMesh navMeshAgent;
 
-    // Code taken from Edirlei:
-
     void Start()
     {
         currentState = initialState;

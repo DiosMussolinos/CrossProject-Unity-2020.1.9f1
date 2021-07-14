@@ -5,7 +5,7 @@ using UnityEngine;
 public class FoxShadow : Attributes
 {
     public override string Name { get; set; } = "Rabbit";
-    public override int ID { get; set; } = 5;
+    public override ShadowsID ID { get; set; } = ShadowsID.Rabbit;
     public override float Speed { get; set; } = 4f;
     public override float ChasingSpeed { get; set; } = 7f;
     public override float ChaseRange { get; set; } = 5f;

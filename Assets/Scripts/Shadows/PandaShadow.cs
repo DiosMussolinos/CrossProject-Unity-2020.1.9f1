@@ -6,7 +6,7 @@ public class PandaShadow : Attributes
 {
     public override string Name { get; set; } = "Panda";
 
-    public override int ID { get; set; } = 2;
+    public override ShadowsID ID { get; set; } = ShadowsID.Panda;
 
     public override float Speed { get; set; } = 5f;
     public override float ChasingSpeed { get; set; } = 3.5f;

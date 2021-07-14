@@ -21,6 +21,10 @@ public class NavMesh : MonoBehaviour
     public SpeechManager narrations;
     public bool hasSpoken;
     
+    // LION KING:
+    public List<Waypoints> marks;
+    public GameObject markPrefab;
+
     // CAT:
     public GameObject[] corners;
     public Transform waypointInCorner;
@@ -35,6 +39,7 @@ public class NavMesh : MonoBehaviour
     public ControlAndMovement control;
 
     //DEER :
+    
     public int deerCountDown = 0;
     public float deerSearch = 3f;
     public float deerSearchInitial = 3f;
@@ -47,7 +52,7 @@ public class NavMesh : MonoBehaviour
         return narrations;
     }
 
-    public int ShadowID()
+    public ShadowsID ShadowID()
     {
         return imaginaryFriend.ID;
     }
@@ -109,6 +114,7 @@ public class NavMesh : MonoBehaviour
     public void Patrol()
     {
 
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance) // if agent is stopped (if he is on a waypoint)
         {
             if (currWaypoint >= path.Count)
             {
@@ -122,20 +128,9 @@ public class NavMesh : MonoBehaviour
             }
             agent.SetDestination(path[currWaypoint].transform.position); // move to next waypoint
             currWaypoint++;
-            pandaCountDown += 1;
-            /*DEER*/
-            randomNumb = Random.Range(1, 3);
-            if (randomNumb == 1)
-            {
-                sideRotation = 1;
-            }
-            else
-            {
-                sideRotation = -1;
-            }
-            deerCountDown += 1;
-            //Debug.Log(pandaCountDown);
+            
         }
+               
     }
 
     public void RabbitPatrol()
@@ -150,20 +145,12 @@ public class NavMesh : MonoBehaviour
                 {
                     currTarget = 0;
                 }
-                //float normalDistanceRestart = Vector3.Distance(transform.position, path[currWaypoint + 1].transform.position);
-                //Vector3 jumpingRestart = new Vector3(agent.velocity.x, normalDistanceRestart, 0);
-                //rb.AddForce(jumpingRestart);
 
-                UpdatePath(); //recalculate path
+                UpdatePath(); 
                 currTarget++;
                 currWaypoint = 0;
             }
 
-
-            //float normalDistance = Vector3.Distance(transform.position, path[currWaypoint + 1].transform.position);
-            //Vector3 jumping = new Vector3(agent.velocity.x, normalDistance, 0);
-            //rb.AddForce(jumping);
-            //Debug.Log(rb.velocity.y);
             agent.SetDestination(path[currWaypoint].transform.position); // move to next waypoint
             currWaypoint++;
         }
@@ -237,7 +224,7 @@ public class NavMesh : MonoBehaviour
 
     public bool ReachedGoal()
     {
-        if (Vector3.Distance(agent.transform.position, targets[targets.Count - 1].transform.position) <= 2f)
+        if (Vector3.Distance(agent.transform.position, targets[targets.Count - 1].transform.position) <= 5f)
         {
             return true;
         }
@@ -283,7 +270,7 @@ public class NavMesh : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0f, transform.rotation.eulerAngles.y, 0f));
     }
 
-    public void RestartTimer()
+    public void RestartPandaTimer()
     {
         pandaSleep = initialPandaSleepTimer;
     }
@@ -343,7 +330,14 @@ public class NavMesh : MonoBehaviour
     public void IncreaseHeartbeat()
     {
         //control
+        // ??????
     }
+
+    public Waypoints GetRandomWaypoints()
+    {
+        return waypoints[Random.Range(0, waypoints.Count)];
+    }
+
 
     private void Start()
     {

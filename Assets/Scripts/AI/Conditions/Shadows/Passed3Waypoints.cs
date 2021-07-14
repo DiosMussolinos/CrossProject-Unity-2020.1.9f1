@@ -7,7 +7,7 @@ public class Passed3Waypoints : Condition
 {
     public override bool Validate(FSM entity)
     {
-        return entity.GetAgent().pandaCountDown >= 3 && entity.GetAgent().imaginaryFriend.ID == 2;
+        return entity.GetAgent().pandaCountDown >= 3 && entity.GetAgent().imaginaryFriend.ID == ShadowsID.Panda;
         
     }
 }

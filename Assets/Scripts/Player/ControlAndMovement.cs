@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ControlAndMovement : MonoBehaviour
 {
+    Controller controls;
     /////Public\\\\
     public float movementSpeed;
     public bool isCollidingWithLight;
@@ -47,14 +50,84 @@ public class ControlAndMovement : MonoBehaviour
     private CharacterController controller;
     private Renderer render;
 
+    private bool isCollidingWithMark;
+    private GameObject markTriggered;
+
+    public GameObject breathingUI;
+    private bool breathingUITriggered;
+
+    // New Input System:
+    public Vector3 moveVec;
+    public bool interactButtonPressed;
+
+
     //EndPrototype
     public int endGame = 0;
 
+    private void Awake()
+    {
+        controls = new Controller();
+        
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        interactButtonPressed = false;
+    }
+
+    //Controls:
+    // for movement detection
+    public void OnMove(InputValue input)
+    {
+        Vector2 inputVec = input.Get<Vector2>();
+        moveVec = new Vector3(inputVec.x, 0, inputVec.y);
+    }
+
+    // for E button
+    public void OnInteract()
+    {
+        interactButtonPressed = true;
+    }
+
+    // for Esc button (to be finished)
+    public void OnEscape()
+    {
+        interacting = false;
+    }
+
+    public void Control()
+    {
+        ////////////Movement && And Camera Behavior\\\\\\\\\\
+        //float movementX = Input.GetAxis("Vertical");
+        //float movementZ = Input.GetAxis("Horizontal");
+
+        //Camemra "walking"\\
+        cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cameraYPos[cameraIndex], cam.transform.localPosition.z);
+
+        //Character Moves == Camera go Up && Down\\
+        if (moveVec != Vector3.zero)
+        {
+
+            cameraIndex += 1;
+            Vector3 move = transform.forward * moveVec.z + transform.right * moveVec.x;
+
+            movementSpeed = 4 + (6 * (heartBeat / 200));
+
+            controller.SimpleMove(move * movementSpeed);
+
+            if (cameraIndex == cameraYPos.Length)
+            {
+                cameraIndex = 0;
+            }
+        }
+
+    }
+
+    public bool HasTriggeredBreathingUI()
+    {
+        return breathingUITriggered;
     }
 
     public void IncreaseHeartbeat(float amount)
@@ -77,6 +150,12 @@ public class ControlAndMovement : MonoBehaviour
         if(col.gameObject.tag == "Lights")
         {
             isCollidingWithLight = true;
+            if(heartBeat > 165)
+            {
+                cam.GetComponent<CameraControl>().DropCamera();
+                breathingUI.SetActive(true);
+                //decrease collider size in the scene for it to look more natural
+            }
         }
 
         if (col.gameObject.tag == "Spawn" && itSpawned == false)
@@ -84,7 +163,14 @@ public class ControlAndMovement : MonoBehaviour
             shadows[0].transform.position = shadowSpawn.transform.position;
             shadows[0].SetActive(true);
             itSpawned = true;
-        }      
+        }   
+
+         if(col.gameObject.tag == "Mark")
+        {
+            isCollidingWithMark = true;
+            markTriggered = col.gameObject;
+            heartBeat += 2;
+        }   
     }
 
     void OnTriggerExit(Collider col)
@@ -93,6 +179,35 @@ public class ControlAndMovement : MonoBehaviour
         {
             isCollidingWithLight = false;
         }
+
+        if (col.gameObject.tag == "Mark")
+        {
+            isCollidingWithMark = false;
+            Waypoints wpToRemove = null;
+            //shadows[4].GetComponent<NavMesh>().marks.Remove(shadows[4].GetComponent<NavMesh>().marks.First(s => s.transform.position == shadows[4].GetComponent<NavMesh>().GetClosestWaypoint(col.transform.position).transform.position));
+            foreach (Waypoints wp in shadows[4].GetComponent<NavMesh>().marks)
+            {
+                if(Vector3.Distance(wp.transform.position, col.transform.position) <= 3f)
+                {
+                    wpToRemove = wp;
+                    Destroy(col.gameObject, 5f);
+                }
+
+            }
+            shadows[4].GetComponent<NavMesh>().marks.Remove(wpToRemove);
+            
+
+        }
+    }
+
+    public GameObject MarkTriggered()
+    {
+        return markTriggered;
+    }
+
+     public bool CollidedWithMark()
+    {
+        return isCollidingWithMark;
     }
 
     public bool CollidedWithLight()
@@ -100,13 +215,20 @@ public class ControlAndMovement : MonoBehaviour
         return isCollidingWithLight;
     }
 
+//FIX:
+    public void ResetHeartbeat()
+    {
+        heartBeat = 80;
+    } 
+//
+
     //Fixed Update is better as have a smoother movement
     private void FixedUpdate()
     {
-        if (interacting == false)
+        if (!interacting && !breathingUI.GetComponent<BreathingUI>().IsUIActive())
         {
             Control();
-        }
+        } 
 
         IncreasingHeartBeat();
         IncreasingHeartBeatDistance();
@@ -114,35 +236,7 @@ public class ControlAndMovement : MonoBehaviour
         //CanSeeShadow();
     }
 
-    public void Control()
-    {
-            //////////Movement && And Camera Behavior\\\\\\\\\\
-            float movementX = Input.GetAxis("Vertical");
-            float movementZ = Input.GetAxis("Horizontal");
-
-            //Camemra "walking"\\
-            cam.transform.localPosition = new Vector3(cam.transform.localPosition.x, cameraYPos[cameraIndex], cam.transform.localPosition.z);
-
-            //Character Moves == Camera go Up && Down
-            if (movementX != 0 || movementZ != 0)
-            {
-                cameraIndex += 1;
-                Vector3 move = transform.forward * movementX + transform.right * movementZ;
-
-                movementSpeed = 4 + (6 * (heartBeat / 200));
-
-                controller.SimpleMove(move * movementSpeed);
-
-            if (cameraIndex == cameraYPos.Length)
-                {
-                    cameraIndex = 0;
-                }
-            }
-            //Camemra "walking"\\
-            //////////Movement && And Camera Behavior\\\\\\\\\\
-        
-    }
-
+     
     public void IncreasingHeartBeat()
     {
         if (CollidedWithLight())

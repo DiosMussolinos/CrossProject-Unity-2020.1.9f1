@@ -6,7 +6,7 @@ public class PlayerShadow : Attributes
 {
     public override string Name { get; set; } = "PlayerShadow";
 
-    public override int ID { get; set; } = 4;
+    public override ShadowsID ID { get; set; } = ShadowsID.Player;
 
     public override float Speed { get; set; } = 5f;
     public override float ChasingSpeed { get; set; } = 3.5f;

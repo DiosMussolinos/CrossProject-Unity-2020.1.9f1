@@ -27,6 +27,7 @@
             // Render the object with the texture generated above, and invert the colors
             Pass
             {
+                /*ZTest is to draw the object on top of everything, might be stupid to have, consider remove*/
                 ZTest Always
 
                 CGPROGRAM
@@ -73,10 +74,12 @@
                     output.grabPos.x += cos(noise * _Time.x * velocity) * filt * strength;
                     output.grabPos.y += sin(noise * _Time.x * velocity) * filt * strength;
 
+
                     return output;
                     
                 }
 
+                /*RETURN COLOR/IMAGE*/
                 float4 fragment(vertexOutput input) : COLOR
                 {
                     return tex2Dproj(_BackgroundTexture, input.grabPos);
@@ -88,5 +91,16 @@
 
         }
 }
+
+/* 
+NOTES:
+
+UNITY_MATRIX_P:
+the projection matrix, decribing the info space being rendered.
+
+UNITY_MATRIX_MV:
+the projection matrix, which describes the screen being rendered
+
+*/
 
 //Jesus, i hate this so much

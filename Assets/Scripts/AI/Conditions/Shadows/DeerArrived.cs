@@ -7,7 +7,7 @@ public class DeerArrived : Condition
 {
     public override bool Validate(FSM entity)
     {
-        return entity.GetAgent().deerCountDown >= 1 && entity.GetAgent().imaginaryFriend.ID == 7;
+        return entity.GetAgent().deerCountDown >= 1 && entity.GetAgent().imaginaryFriend.ID == ShadowsID.Deer;
 
     }
 }

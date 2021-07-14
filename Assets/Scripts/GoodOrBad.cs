@@ -24,7 +24,7 @@ public class GoodOrBad : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             control.interacting = true;
-            endGame.end = true;
+            endGame.end = 1;
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Attributes : MonoBehaviour
 {
     public virtual string Name { get; set; }
-    public virtual int ID { get; set; }
+    public virtual ShadowsID ID { get; set; }
     public virtual float Speed { get; set; }
     public virtual float ChasingSpeed { get; set; }
     public virtual float ChaseRange { get; set; }
@@ -25,6 +25,8 @@ public class Attributes : MonoBehaviour
     //Cat:
     public virtual float HidingTimer { get; set; }
     public virtual float InitialHidingTimer { get; set; }
+    public virtual float InitialMarkingTimer { get; set; }
+    public virtual float MarkingTimer { get; set; }
 
 
 

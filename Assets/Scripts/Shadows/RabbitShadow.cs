@@ -5,10 +5,10 @@ using UnityEngine;
 public class RabbitShadow : Attributes
 {
     public override string Name { get; set; } = "Rabbit";
-    public override int ID { get; set; } = 3;
+    public override ShadowsID ID { get; set; } = ShadowsID.Rabbit;
     public override float Speed { get; set; } = 5f;
     public override float ChasingSpeed { get; set; } = 8f;
-    public override float ChaseRange { get; set; } = 5f;
+    public override float ChaseRange { get; set; } = 15f;
     public override float VisionRange { get; set; } = 7f;
     public override float AttackRange { get; set; } = 3f;
     public override float SearchTimer { get; set; } = 10f;

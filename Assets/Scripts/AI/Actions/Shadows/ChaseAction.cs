@@ -15,9 +15,9 @@ public class ChaseAction : Action
         entity.GetAgent().imaginaryFriend.InitialChaseTimer -= Time.deltaTime;
         entity.GetAgent().EnableCollisionAvoidance();
 
-        if (entity.GetAgent().imaginaryFriend.ID == 3)
+        if (entity.GetAgent().imaginaryFriend.ID == ShadowsID.Rabbit)
         {
-            entity.GetAgent().control.heartBeat += 0.7f * Time.deltaTime;
+            entity.GetAgent().control.heartBeat += 0.2f * Time.deltaTime;
         }
     
     }

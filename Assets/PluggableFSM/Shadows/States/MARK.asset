@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beff46633b1b02f478b5a8d5bda06804, type: 3}
+  m_Name: MARK
+  m_EditorClassIdentifier: 
+  entryAction: {fileID: 0}
+  stateActions:
+  - {fileID: 11400000, guid: a748c1d0d3f62a148b7256e833a0fe3a, type: 2}
+  exitAction: {fileID: 0}
+  transitions:
+  - {fileID: 11400000, guid: ad2e8cc79e9c3bb488a6e10ab6952e85, type: 2}
+  - {fileID: 11400000, guid: 3d30863adb5856b4ea8e715e15527ff4, type: 2}
+  previousState: {fileID: 11400000, guid: d9234df6f14141846913f9b9b9a6d431, type: 2}

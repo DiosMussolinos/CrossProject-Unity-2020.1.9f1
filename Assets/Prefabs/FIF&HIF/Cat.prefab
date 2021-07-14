@@ -72,43 +72,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrations: {fileID: 0}
+  InGameUI: {fileID: 0}
   firstQuestionary:
-  - Hey there little friend,
-  - Do you know anything about your dad?
+  - Greetings...
+  - Do you feel worthy of my time?
   optionsFirstQuestionary:
-  - Not actually
   - Yes
-  - Do you know..?
-  answerFirstQuestionary: 0
+  - No
+  - No, Yes, What're you talking about?
+  answerFirstQuestionary: 2
   secondQuestionary:
-  - Let me tell you about your dad,,,
-  - He abuse power...
-  - He hurt your mother...
-  - He hurt you...
-  - I know this, because im part of you...
+  - Some answers must be silenced...
+  - Or ignored...
+  - Let's continue our conversation.
   optionsSecondQuestionary:
-  - What do you mean?
-  - He couldn't do that!
-  - I can't... Remember...
+  - I Don't understand
+  - 0
+  - 0
   answerSecondQuestionary: 1
   thirdQuestionary:
-  - Do me a favor,
-  - Let me bring back your memories.
-  - Pick a scissor for me...
+  - "Well anyways\u2026"
+  - The murder weapon has handles but isn't a car.
+  - Has two blades but it isn't a razor. Tell me, what do you think of sharp objects?
+  - Do you know what weapon it was?
   optionsThirdQuestionary:
   - haha
   - on my way
   - nop
   answerThirdQuestionary: 0
-  FourQuestionary:
-  - fourth
-  - Questionary
-  - a
-  optionsFourthQuestionary:
-  - 
-  - 
-  - 
   itemRequested: {fileID: 11400000, guid: 21782528fb0ac6e4ba84596996da533e, type: 2}
+  IFDrawObject: {fileID: 0}
+  IFDraw: {fileID: 2800000, guid: b8112670976982a4284ad5872c528123, type: 3}
   HIInteractions: {fileID: 0}
   HIOptions: {fileID: 0}
   options:
@@ -125,8 +119,8 @@ MonoBehaviour:
   ShadowSpawn: {fileID: 0}
   flower: {fileID: 0}
   interactingState: {fileID: 11400000, guid: 1a5207a824ca3f9478c07f308e4894f5, type: 2}
-  selectedOption: {fileID: 0}
-  notSelectedOption: {fileID: 0}
+  selectedOption: {fileID: 2800000, guid: cda3226159ff2134e90b85f72f5afdf5, type: 3}
+  notSelectedOption: {fileID: 2800000, guid: 43384596bedce9a40a4d595f8480cfbc, type: 3}
 --- !u!114 &8950415656550960181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,43 +194,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   origin: {fileID: 0}
   timer: 0
   targets:
@@ -249,6 +206,8 @@ MonoBehaviour:
   imaginaryFriend: {fileID: 8950415656550960179}
   narrations: {fileID: 0}
   hasSpoken: 0
+  marks: []
+  markPrefab: {fileID: 0}
   corners: []
   waypointInCorner: {fileID: 0}
   animalSFX: {fileID: 0}

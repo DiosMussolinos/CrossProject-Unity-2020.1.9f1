@@ -8,7 +8,7 @@ public class AttackAction : Action
     public override void Act(FSM entity)
     {
 
-        if (entity.GetAgent().imaginaryFriend.ID == 3)
+        if (entity.GetAgent().imaginaryFriend.ID == ShadowsID.Rabbit)
         {
             //Rabbit
             entity.GetAgent().imaginaryFriend.InitialChaseTimer = entity.GetAgent().imaginaryFriend.ChaseTimer;

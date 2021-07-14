@@ -9,6 +9,7 @@ public class HostileImaginaryFriends : MonoBehaviour
     public SpeechManager narrations;
     //Questionaries 
     //Last one is que question
+    public GameObject InGameUI;
     public string[] firstQuestionary;
     public string[] optionsFirstQuestionary;
     public int answerFirstQuestionary;
@@ -21,8 +22,6 @@ public class HostileImaginaryFriends : MonoBehaviour
     public string[] optionsThirdQuestionary;
     public int answerThirdQuestionary;
 
-    public string[] FourQuestionary;
-    public string[] optionsFourthQuestionary;
     public Item itemRequested;
 
     //Draw
@@ -55,7 +54,6 @@ public class HostileImaginaryFriends : MonoBehaviour
     private int fQuestionaryIndex = 0;
     private int sQuestionaryIndex = 0;
     private int tQuestionaryIndex = 0;
-    private int foQuestionaryIndex = 0;
 
     private bool HIOptionAndSentence = false;
 
@@ -82,7 +80,7 @@ public class HostileImaginaryFriends : MonoBehaviour
     void Update()
     {
         
-        if ((fsm.currentState == interactingState) && (Input.GetKeyDown("e")) && (ActiveQuestionary == 0))
+        if ((fsm.currentState == interactingState) && (Input.GetKeyDown("e")) && (ActiveQuestionary == 0) && (!control.HasTriggeredBreathingUI()))
         {
             //narrations.TriggeredSpeech(gameObject, 1);
             control.interacting = true;
@@ -91,19 +89,20 @@ public class HostileImaginaryFriends : MonoBehaviour
             IFDrawObject.texture = IFDraw;
             //Time off
             Time.timeScale = 0;
+            InGameUI.SetActive(false);
 
         }
 
         if ((fsm.currentState == interactingState) && (Input.GetKeyDown("e")))
         {
-            if (ActiveQuestionary == 9)
+            if (ActiveQuestionary == 7)
             {
                 control.interacting = true;
                 HIOptionAndSentence = true;
                 HIInteractions.SetActive(HIOptionAndSentence);
                 //turn on options
                 HIOptions.SetActive(HIOptionAndSentence);
-                ActiveQuestionary = 8;
+                ActiveQuestionary = 6;
             }
             else
             {
@@ -138,12 +137,6 @@ public class HostileImaginaryFriends : MonoBehaviour
                 AswerThirdQuestionary();
                 break;
             case 7:
-                FourthQuestionary();
-                break;
-            case 8:
-                AswerFourthQuestionary();
-                break;
-            case 9:
                 TurnItAllOff();
                 break;
         }
@@ -200,14 +193,14 @@ public class HostileImaginaryFriends : MonoBehaviour
         if ((optionsIndex == answerFirstQuestionary) && (Input.GetMouseButtonDown(0)))
         {
             control.heartBeat -= 5;
-            ActiveQuestionary += 1;
+            ActiveQuestionary = 3;
             optionsIndex = 0;
             HIOptions.SetActive(false);
         }
         if ((optionsIndex != answerFirstQuestionary) && (Input.GetMouseButtonDown(0)))
         {
             control.heartBeat += 10;
-            ActiveQuestionary += 1;
+            ActiveQuestionary = 3;
             optionsIndex = 0;
             HIOptions.SetActive(false);
         }
@@ -233,7 +226,7 @@ public class HostileImaginaryFriends : MonoBehaviour
             sQuestionaryIndex += 1;
             if (sQuestionaryIndex == secondQuestionary.Length - 1)
             {
-                ActiveQuestionary += 1;
+                ActiveQuestionary = 4;
             }
         }
         sentenceUI.text = secondQuestionary[sQuestionaryIndex];
@@ -317,8 +310,22 @@ public class HostileImaginaryFriends : MonoBehaviour
 
     public void AswerThirdQuestionary()
     {
+        if (selected.itemColleted == null)
+        {
+            optionsThirdQuestionary[0] = "Give item (No Item)";
+            optionsThirdQuestionary[1] = "Don't give item (No Item)";
+            optionsThirdQuestionary[2] = "Leave";
+        }
+        else
+        {
+            optionsThirdQuestionary[0] = "Give item (" + selected.itemColleted.name + ")";
+            optionsThirdQuestionary[1] = "Don't give item (" + selected.itemColleted.name + ")";
+            optionsThirdQuestionary[2] = "Leave";
+        }
+
+        HIOptionAndSentence = true;
         //Activate Options
-        HIOptions.SetActive(true);
+        HIOptions.SetActive(HIOptionAndSentence);
 
         //W & S to change optionIndex
         if (Input.GetKeyDown("w") == true)
@@ -346,104 +353,6 @@ public class HostileImaginaryFriends : MonoBehaviour
             }
         }
 
-        if ((optionsIndex == answerThirdQuestionary) && (Input.GetMouseButtonDown(0)))
-        {
-            control.heartBeat -= 10;
-            ActiveQuestionary = 7;
-            HIOptions.SetActive(false);
-            optionsIndex = 0;
-        }
-        if ((optionsIndex != answerThirdQuestionary) && (Input.GetMouseButtonDown(0)))
-        {
-            control.heartBeat += 10;
-            ActiveQuestionary = 7;
-            HIOptions.SetActive(false);
-            optionsIndex = 0;
-        }
-
-        /* BACK TO INITIAL OPTION */
-        if (optionsIndex < startIndex)
-        {
-            optionsIndex = 2;
-        }
-        if (optionsIndex > lastIndex)
-        {
-            optionsIndex = 0;
-        }
-        /*BACK TO INITIAL OPTION*/
-    }
-
-    /*            case 7:
-                FourthQuestionary();
-                break;
-            case 8:
-                AswerFourthQuestionary();
-                break;
-    */
-
-
-    private void FourthQuestionary()
-    {
-        //Activate * (-1) Options
-        HIOptions.SetActive(false);
-
-        // Press Left click to next sentence
-        if (Input.GetMouseButtonDown(0))
-        {
-            foQuestionaryIndex += 1;
-            if (foQuestionaryIndex == FourQuestionary.Length - 1)
-            {
-                ActiveQuestionary = 8;
-            }
-        }
-        sentenceUI.text = FourQuestionary[foQuestionaryIndex];
-    }
-
-    private void AswerFourthQuestionary()
-    {
-        if (selected.itemColleted == null)
-        {
-            optionsFourthQuestionary[0] = "Give item (No Item)";
-            optionsFourthQuestionary[1] = "Don't give item (No Item)";
-            optionsFourthQuestionary[2] = "Leave";
-        }
-        else
-        {
-            optionsFourthQuestionary[0] = "Give item (" + selected.itemColleted.name + ")";
-            optionsFourthQuestionary[1] = "Don't give item (" + selected.itemColleted.name + ")";
-            optionsFourthQuestionary[2] = "Leave";
-        }
-
-        HIOptionAndSentence = true;
-        //Activate Options
-        HIOptions.SetActive(HIOptionAndSentence);
-
-        //W & S to change optionIndex
-        if (Input.GetKeyDown("w") == true)
-        {
-            optionsIndex -= 1;
-        }
-        if (Input.GetKeyDown("s") == true)
-        {
-            optionsIndex += 1;
-        }
-
-        //Change the color to show the option activated
-        for (int i = 0; i < options.Length; i++)
-        {
-            optionsText[i].text = optionsFourthQuestionary[i];
-            if (i == optionsIndex)
-            {
-                options[optionsIndex].texture = selectedOption;
-                optionsText[optionsIndex].color = Color.white;
-            }
-            else
-            {
-                options[i].texture = notSelectedOption;
-                optionsText[i].color = Color.white;
-            }
-        }
-
         //Give item player has
         if ((optionsIndex == 0) && (Input.GetMouseButtonDown(0)))
         {
@@ -457,10 +366,11 @@ public class HostileImaginaryFriends : MonoBehaviour
                 optionsIndex = 0;
                 //Turn Off
                 control.interacting = false;
-                ActiveQuestionary = 9;
+                ActiveQuestionary = 7;
                 //Flower
                 flower.transform.position = transform.position;
                 flower.SetActive(true);
+                InGameUI.SetActive(true);
             }
             else
             {
@@ -469,13 +379,14 @@ public class HostileImaginaryFriends : MonoBehaviour
                 Destroy(gameObject, 0.5f);
                 //Turn Off
                 control.interacting = false;
-                ActiveQuestionary = 9;
+                ActiveQuestionary = 7;
                 optionsIndex = 0;
                 //////Consequence\\\\
                 Shadow.transform.position = ShadowSpawn.transform.position;
                 Shadow.SetActive(true);
                 //Flower
                 flower.SetActive(true);
+                InGameUI.SetActive(true);
             }
         }
 
@@ -485,14 +396,14 @@ public class HostileImaginaryFriends : MonoBehaviour
             Destroy(gameObject, 0.5f);
             //Turn Off
             control.interacting = false;
-            ActiveQuestionary = 9;
+            ActiveQuestionary = 7;
             ////Consequence\\\\
             //Active Shadow
             optionsIndex = 0;
             //Flower
             flower.transform.position = transform.position;
             flower.SetActive(true);
-
+            InGameUI.SetActive(true);
         }
 
         if ((optionsIndex == 2) && (Input.GetMouseButtonDown(0)))
@@ -502,7 +413,8 @@ public class HostileImaginaryFriends : MonoBehaviour
             ActiveQuestionary += 1;
             optionsIndex = 0;
             //Turn Off
-            ActiveQuestionary = 9;
+            ActiveQuestionary = 7;
+            InGameUI.SetActive(true);
         }
 
         /* BACK TO INITIAL OPTION */
