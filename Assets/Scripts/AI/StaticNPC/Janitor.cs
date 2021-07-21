@@ -8,6 +8,7 @@ public class Janitor : MonoBehaviour
     public GameObject player;
     private bool hasExecuted;
     private int speechNumber;
+   
 
     public void GoThoughSpeeches()
     {

@@ -66,8 +66,8 @@ public class ControlAndMovement : MonoBehaviour
 
     private void Awake()
     {
-        controls = new Controller();
-        
+        startedGame = true;
+        controls = new Controller();   
     }
 
     // Start is called before the first frame update

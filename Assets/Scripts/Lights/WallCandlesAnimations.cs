@@ -70,7 +70,5 @@ public class WallCandlesAnimations : MonoBehaviour
         {
             index = 2;
         }
-
-
     }
 }

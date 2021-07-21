@@ -110,15 +110,13 @@ public class AllMenus : MonoBehaviour
     void Start()
     {
         control = player.GetComponent<ControlAndMovement>();
-        if (alreadyStarted == true)
-        {
-            menuScreenIndex = 15;
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(control.startedGame);
+
         switch (menuScreenIndex)
         {
             case 0:
@@ -783,7 +781,6 @@ public class AllMenus : MonoBehaviour
         {
             started = true;
             menuScreenIndex = 17;
-            alreadyStarted = true;
             
             animationIndex = 0;
         }
@@ -791,7 +788,6 @@ public class AllMenus : MonoBehaviour
         if ((menuOptionIndex == 1) && (Input.GetMouseButtonDown(0)))
         {
             alreadyStarted = true;
-            optionsBool = true;
             menuScreenIndex = 17;
             animationIndex = 0;
         }
@@ -2809,6 +2805,7 @@ public class AllMenus : MonoBehaviour
         {
             if (playGameBool == true)
             {
+                alreadyStarted = true;
                 SceneManager.LoadScene("Rocca Inside");
                 control.startedGame = true;
                 playDemoBool = false;
@@ -2816,6 +2813,7 @@ public class AllMenus : MonoBehaviour
             }
             if (playDemoBool == true)
             {
+                alreadyStarted = true;
                 SceneManager.LoadScene("Prototype");
                 control.startedGame = true;
                 playDemoBool = false;

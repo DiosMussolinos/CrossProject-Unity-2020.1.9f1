@@ -110,7 +110,7 @@ public class FriendlyImaginaryFriends : MonoBehaviour
             optionsText[1].text = "Don't give item (" + selected.itemColleted.name + ")";
             optionsText[2].text = "Leave";
         }
-        
+
 
         //Activate Options
         ifOptions.SetActive(true);
