@@ -51,8 +51,8 @@ public class AllMenus : MonoBehaviour
     public GameObject player;
     private ControlAndMovement control;
 
-    private int menuScreenIndex = 0;
-    private int menuOptionIndex = 0;
+    [HideInInspector] public int menuScreenIndex = 0;
+    [HideInInspector] public int menuOptionIndex = 0;
     private int animationIndex = 0;
     private int difficultyIndex = 1;
     private int subtitlesIndex = 0;
@@ -115,7 +115,7 @@ public class AllMenus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(control.startedGame);
+        //Debug.Log(control.startedGame);
 
         switch (menuScreenIndex)
         {

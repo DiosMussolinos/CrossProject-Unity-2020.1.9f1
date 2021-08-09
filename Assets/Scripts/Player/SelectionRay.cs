@@ -8,7 +8,6 @@ public class SelectionRay : MonoBehaviour
     public Text itemName;
     public GameObject textItemName;
     //Textures = Images
-    public Texture lampTexture;
     public Texture handTexture;
     //Flowers
     public RawImage[] flowers;
@@ -114,7 +113,6 @@ public class SelectionRay : MonoBehaviour
                     int flowerID;
                     flowerID = Hit.transform.gameObject.GetComponent<FlowerData>().flowerData.ID;
 
-                    flowers[flowerID].texture = lampTexture;
                     flowersCount += 1;
                     Destroy(Hit.transform.gameObject);
 

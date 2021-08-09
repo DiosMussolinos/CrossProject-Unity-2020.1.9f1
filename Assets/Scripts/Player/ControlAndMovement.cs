@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ControlAndMovement : MonoBehaviour
 {
@@ -63,11 +64,14 @@ public class ControlAndMovement : MonoBehaviour
 
     //EndPrototype
     public int endGame = 0;
+    public Text PressE;
+    private float alpha = 0;
 
     private void Awake()
     {
         startedGame = true;
-        controls = new Controller();   
+        controls = new Controller();
+        
     }
 
     // Start is called before the first frame update
@@ -122,7 +126,6 @@ public class ControlAndMovement : MonoBehaviour
                 cameraIndex = 0;
             }
         }
-
     }
 
     public bool HasTriggeredBreathingUI()
@@ -152,9 +155,7 @@ public class ControlAndMovement : MonoBehaviour
             isCollidingWithLight = true;
             if(heartBeat > 165)
             {
-                cam.GetComponent<CameraControl>().DropCamera();
-                breathingUI.SetActive(true);
-                //decrease collider size in the scene for it to look more natural
+            
             }
         }
 
@@ -195,8 +196,6 @@ public class ControlAndMovement : MonoBehaviour
 
             }
             shadows[4].GetComponent<NavMesh>().marks.Remove(wpToRemove);
-            
-
         }
     }
 
@@ -225,6 +224,24 @@ public class ControlAndMovement : MonoBehaviour
     //Fixed Update is better as have a smoother movement
     private void FixedUpdate()
     {
+        if ((heartBeat > 165) && (Input.GetKeyDown(KeyCode.E) && (isCollidingWithLight == true) && (interacting == false)))
+        {
+            alpha = 0;
+            cam.GetComponent<CameraControl>().DropCamera();
+            breathingUI.SetActive(true);
+        }
+
+
+        PressE.GetComponent<Text>().color = new Vector4(255, 255, 255, alpha);
+        if ((isCollidingWithLight == true) &&(heartBeat > 165))
+        {
+            alpha = 255;
+        }
+        else
+        {
+            alpha = 0;
+        }
+
         if (!interacting && !breathingUI.GetComponent<BreathingUI>().IsUIActive())
         {
             Control();
@@ -232,8 +249,6 @@ public class ControlAndMovement : MonoBehaviour
 
         IncreasingHeartBeat();
         IncreasingHeartBeatDistance();
-        //ShaderControl();
-        //CanSeeShadow();
     }
 
      
