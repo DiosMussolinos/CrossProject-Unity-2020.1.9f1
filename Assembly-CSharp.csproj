@@ -96,6 +96,7 @@
     <Compile Include="Assets\Scripts\Player\SoundController.cs" />
     <Compile Include="Assets\Scripts\EndPrototype.cs" />
     <Compile Include="Assets\Scripts\GoodOrBad.cs" />
+    <Compile Include="Assets\Scripts\UI\Menu\MouseOver.cs" />
     <Compile Include="Assets\Scripts\Player\BreathingUI.cs" />
     <Compile Include="Assets\Scripts\Flowers\Flower.cs" />
     <Compile Include="Assets\Scripts\AI\Actions\Shadows\MarkAction.cs" />
@@ -180,7 +181,9 @@
     <Compile Include="Assets\Scripts\Shadows\FoxShadow.cs" />
     <Compile Include="Assets\Scripts\AI\Actions\Shadows\DeerPatrol.cs" />
     <Compile Include="Assets\Scripts\Lights\LineCast.cs" />
-    <Compile Include="Assets\Scripts\UI\Menu\MouseOver.cs" />
+    <Compile Include="Assets\Scripts\UI\In-Game\MouseOverPause.cs" />
+    <Compile Include="Assets\Scripts\UI\In-Game\MouseOverGameOver.cs" />
+    <Compile Include="Assets\Scripts\UI\In-Game\MouseOverEnd.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

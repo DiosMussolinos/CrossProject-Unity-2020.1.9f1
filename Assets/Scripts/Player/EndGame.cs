@@ -26,7 +26,7 @@ public class EndGame : MonoBehaviour
 
     private VideoPlayer video;
     private float videoLenght = 5.8f;
-    private int options = 0;
+    [HideInInspector] public int options = 0;
     private ControlAndMovement control;
     private PauseMenu pause;
 

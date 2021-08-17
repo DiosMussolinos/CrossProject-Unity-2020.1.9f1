@@ -22,7 +22,7 @@ public class GameOver : MonoBehaviour
     private float[] on = { 0f, 0f, 0.05f, 0.1f, 0.15f, 0.2f, 0.25f, 0.3f, 0.35f, 0.4f, 0.45f, 0.50f };
     private int arrayIndex = 0;
     private int gameOverOrder = 0;
-    private int options = 0;
+    [HideInInspector] public int options = 0;
 
 
     // Start is called before the first frame update
@@ -56,6 +56,7 @@ public class GameOver : MonoBehaviour
             UIGame.SetActive(false);
             selector.SetActive(false);
             gameOverOrder = 1;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
@@ -174,6 +175,7 @@ public class GameOver : MonoBehaviour
             Time.timeScale = 1;
             gameOver.SetActive(false);
             SceneManager.LoadScene("Prototype");
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         if ((options == 1) && (Input.GetMouseButtonDown(0)))
@@ -183,6 +185,7 @@ public class GameOver : MonoBehaviour
             Time.timeScale = 1;
             gameOver.SetActive(false);
             SceneManager.LoadScene("Menus");
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

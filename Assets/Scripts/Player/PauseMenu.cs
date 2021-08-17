@@ -21,7 +21,7 @@ public class PauseMenu : MonoBehaviour
     private float timeToNextInitial = 0.0434f;
 
     private int pauseOrder = 0;
-    private int options = 0;
+    [HideInInspector] public int options = 0;
     private int arrayIndex = 0;
     public bool isPaused = false;
     private float[] on = { 0f, 0f, 0.05f, 0.1f, 0.15f, 0.2f, 0.25f, 0.3f, 0.35f, 0.4f, 0.45f, 0.45f };
@@ -210,6 +210,8 @@ public class PauseMenu : MonoBehaviour
             pauseOrder = 3;
             arrayIndex = 0;
             Time.timeScale = 1;
+
+            
         }
 
         if ((options == 1) && (Input.GetMouseButtonDown(0)))
@@ -225,7 +227,6 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 1;
             control.interacting = false;
             isPaused = false;
-
         }
 
         if ((options == 3) && (Input.GetMouseButtonDown(0)))
